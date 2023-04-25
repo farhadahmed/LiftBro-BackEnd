@@ -1,7 +1,7 @@
-package com.liftbro.backend.service;
+package com.liftbro.backend.services;
 
-import com.liftbro.backend.binding.UsersTest;
-import com.liftbro.backend.repo.UserRepository;
+import com.liftbro.backend.models.UsersTest;
+import com.liftbro.backend.repos.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

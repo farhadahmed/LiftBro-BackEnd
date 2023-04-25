@@ -1,6 +1,6 @@
-package com.liftbro.backend.service;
+package com.liftbro.backend.services;
 
-import com.liftbro.backend.binding.UsersTest;
+import com.liftbro.backend.models.UsersTest;
 
 import java.util.List;
 

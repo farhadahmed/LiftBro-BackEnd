@@ -1,7 +1,7 @@
-package com.liftbro.backend.service;
+package com.liftbro.backend.services;
 
-import com.liftbro.backend.binding.Demos;
-import com.liftbro.backend.repo.DemosRepository;
+import com.liftbro.backend.models.Demos;
+import com.liftbro.backend.repos.DemosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
