@@ -1,0 +1,63 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.liftbro'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+//create a single Jar with all dependencies
+//task fatJar(type: Jar) {
+//	manifest {
+//		attributes 'Implementation-Title': 'Gradle Jar File Example',
+//				'Implementation-Version': version,
+//				'Main-Class': 'com.liftbro.backend'
+//	}
+//	baseName = project.name + '-all'
+//	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+//	with jar
+//}
+
+jar {
+	duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+	manifest {
+		attributes 'Main-Class': 'com.liftbro.backend.LiftBroApplication'
+	}
+//	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	from {
+//		configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+
+	archivesBaseName = 'liftbro-backend-jar'
+	archiveVersion = '0.1.0'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	implementation 'com.google.code.gson:gson'
+	implementation 'software.amazon.awssdk:secretsmanager:2.20.8'
+
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+//	useJUnitPlatform()
+}
