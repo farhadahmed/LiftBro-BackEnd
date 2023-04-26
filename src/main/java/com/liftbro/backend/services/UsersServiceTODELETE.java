@@ -4,7 +4,7 @@ import com.liftbro.backend.models.UsersTest;
 
 import java.util.List;
 
-public interface UserSerice {
+public interface UsersServiceTODELETE {
 
     // upsert is a polymorphic method used for both insert and update
     public String upsert(UsersTest user);

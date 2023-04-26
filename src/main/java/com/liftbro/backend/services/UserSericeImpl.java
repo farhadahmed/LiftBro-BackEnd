@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserSericeImpl implements UserSerice {
+public class UserSericeImpl implements UsersServiceTODELETE {
 
     @Autowired
     private UserRepository userRepo;
