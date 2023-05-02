@@ -34,7 +34,7 @@ public class WorkoutSessionsController {
     }
 
     @PutMapping("/workoutSessions")
-    public ResponseEntity<String> updateWorkoutLocation(@RequestBody WorkoutSessions workoutSession) {
+    public ResponseEntity<String> updateWorkoutSession(@RequestBody WorkoutSessions workoutSession) {
         String status = workoutSessionsService.upsert(workoutSession);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
