@@ -20,13 +20,14 @@ public class StorageService {
     private final String FOLDER_PATH = "/Users/farhadahmed/Developer/LiftBro/ImageFiles/";
 
     public String uploadImageToFileSystem(MultipartFile file) throws IOException {
-        String filePath=FOLDER_PATH+file.getOriginalFilename();
+        String filePath = FOLDER_PATH+file.getOriginalFilename();
 
-        FileData fileData=fileDataRepository.save(FileData.builder()
+        FileData fileData = fileDataRepository.save(FileData.builder()
                 .name(file.getOriginalFilename())
                 .type(file.getContentType())
                 .filePath(filePath).build());
 
+        // Upload the image to a specified destination (for now it's local)
         file.transferTo(new File(filePath));
 
         if (fileData != null) {
