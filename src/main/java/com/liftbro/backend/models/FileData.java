@@ -16,7 +16,8 @@ public class FileData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int photo_id;
+    private int user_id;
     private String name;
     private String type;
     private String filePath;
