@@ -41,5 +41,5 @@ public class StorageService {
         String filePath=fileData.get().getFilePath();
         byte[] images = Files.readAllBytes(new File(filePath).toPath());
         return images;
-    }
+    } 
 }
