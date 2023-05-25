@@ -1,6 +1,6 @@
-package com.liftbro.backend.repo;
+package com.liftbro.backend.repos;
 
-import com.liftbro.backend.binding.Demos;
+import com.liftbro.backend.models.Demos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.io.Serializable;

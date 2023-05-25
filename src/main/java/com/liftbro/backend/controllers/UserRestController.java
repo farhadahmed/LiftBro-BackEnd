@@ -1,7 +1,7 @@
-package com.liftbro.backend.rest;
+package com.liftbro.backend.controllers;
 
-import com.liftbro.backend.binding.UsersTest;
-import com.liftbro.backend.service.UserSerice;
+import com.liftbro.backend.models.UsersTest;
+import com.liftbro.backend.services.UsersServiceTODELETE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import java.util.List;
 public class UserRestController {
 
     @Autowired
-    private UserSerice userSerice;
+    private UsersServiceTODELETE userSerice;
 
     @PostMapping("/users")
     public ResponseEntity<String> createUser(@RequestBody UsersTest user) {
