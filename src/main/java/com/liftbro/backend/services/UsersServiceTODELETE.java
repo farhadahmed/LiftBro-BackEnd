@@ -1,10 +1,10 @@
-package com.liftbro.backend.service;
+package com.liftbro.backend.services;
 
-import com.liftbro.backend.binding.UsersTest;
+import com.liftbro.backend.models.UsersTest;
 
 import java.util.List;
 
-public interface UserSerice {
+public interface UsersServiceTODELETE {
 
     // upsert is a polymorphic method used for both insert and update
     public String upsert(UsersTest user);

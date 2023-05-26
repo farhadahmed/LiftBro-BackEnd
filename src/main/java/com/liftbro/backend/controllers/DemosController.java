@@ -1,7 +1,7 @@
-package com.liftbro.backend.rest;
+package com.liftbro.backend.controllers;
 
-import com.liftbro.backend.binding.Demos;
-import com.liftbro.backend.service.DemosService;
+import com.liftbro.backend.models.Demos;
+import com.liftbro.backend.services.DemosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
