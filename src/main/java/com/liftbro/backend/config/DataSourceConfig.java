@@ -37,7 +37,8 @@ public class DataSourceConfig {
 
     private AwsSecretsDTO getSecret() {
 
-        String secretName = "LiftBroDBSecret";
+//        String secretName = "LiftBroDBSecret";
+        String secretName = "prod/LiftBroDB";
         Region region = Region.of("us-west-2");
 
         // Supply credentials
