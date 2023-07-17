@@ -10,4 +10,9 @@ public class WebController {
     public String getHomePage() {
         return "<h1> Lift Bro home page placeholder </h1>";
     }
+
+    @GetMapping("/test")
+    public String getTestPage() {
+        return "<h1> Test1 </h1>";
+    }
 }

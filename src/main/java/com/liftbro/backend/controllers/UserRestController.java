@@ -13,35 +13,35 @@ import java.util.List;
 public class UserRestController {
 
     @Autowired
-    private UsersServiceTODELETE userSerice;
+    private UsersServiceTODELETE userService;
 
     @PostMapping("/users")
     public ResponseEntity<String> createUser(@RequestBody UsersTest user) {
-        String status = userSerice.upsert(user);
+        String status = userService.upsert(user);
         return new ResponseEntity<>(status, HttpStatus.CREATED);
     }
 
     @GetMapping("/users/{users_id}")
     public ResponseEntity<UsersTest> getUser(@PathVariable Integer users_id) {
-        UsersTest user = userSerice.getById(users_id);
+        UsersTest user = userService.getById(users_id);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
     @GetMapping("/users")
     public ResponseEntity<List<UsersTest>> getAllUsers() {
-        List<UsersTest> allUsers = userSerice.getAllUsers();
+        List<UsersTest> allUsers = userService.getAllUsers();
         return new ResponseEntity<>(allUsers, HttpStatus.OK);
     }
 
     @PutMapping("/users")
     public ResponseEntity<String> updateUser(@RequestBody UsersTest user) {
-        String status = userSerice.upsert(user);
+        String status = userService.upsert(user);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
 
     @DeleteMapping("/users/{users_id}")
     public ResponseEntity<String> deleteUser(@PathVariable Integer users_id) {
-        String status = userSerice.deleteById(users_id);
+        String status = userService.deleteById(users_id);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
 }
