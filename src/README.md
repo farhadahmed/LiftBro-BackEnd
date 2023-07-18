@@ -19,3 +19,6 @@ Lift Bro is a social networking app for gym goers. This project contains the fol
 ## How to run
 * The YAML file containing key/secret for AWS Secrets is not available through GitHub. To receive the AWS access key and secret for this app, contact Farhad.
 * To run the app, use: ./gradlew bootRun
+
+## Build jar file
+* ./gradlew clean build
